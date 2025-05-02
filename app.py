@@ -57,7 +57,7 @@ img = generate_qr_image(qr_url)
 st.image(img)
 
 # Attendance form
-query_params = st.experimental_get_query_params()
+query_params = st.query_params()
 if 'token' in query_params:
     user_token = query_params['token'][0]
     if is_token_valid(user_token):
